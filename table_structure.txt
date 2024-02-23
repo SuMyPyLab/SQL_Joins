@@ -1,3 +1,20 @@
+CREATE TABLE `club` (
+  `club_code` char(3) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `club_name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `country` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`club_code`)
+) ENGINE=InnoDB;
+
+CREATE TABLE `footballer` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `position` char(2) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `birth_date` date DEFAULT NULL,
+  `club_code` char(3) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+
+
 mysql> desc footballer;
 +------------+-------------+------+-----+---------+----------------+
 | Field      | Type        | Null | Key | Default | Extra          |
