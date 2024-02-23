@@ -1,1 +1,48 @@
+mysql> desc footballer;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| id         | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name       | varchar(30) | NO   |     | NULL    |                |
+| position   | char(2)     | YES  |     | NULL    |                |
+| birth_date | date        | YES  |     | NULL    |                |
+| club_code  | char(3)     | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+
+mysql> desc club;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| club_code | char(3)     | NO   | PRI | NULL    |       |
+| club_name | varchar(30) | NO   |     | NULL    |       |
+| country   | varchar(30) | NO   |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+
+
+mysql> select * from footballer;
++----+-------------------+----------+------------+-----------+
+| id | name              | position | birth_date | club_code |
++----+-------------------+----------+------------+-----------+
+|  1 | Lionel Messi      | FW       | 1987-06-24 | PSG       |
+|  2 | Kylian Mbappé     | FW       | 1998-12-20 | PSG       |
+|  3 | Karim Benzema     | FW       | 1987-12-19 | MAD       |
+|  4 | Manuel Neuer      | GK       | 1986-03-27 | BAY       |
+|  5 | Cristiano Ronaldo | MF       | 1985-02-05 | MUN       |
+|  6 | Bruno Fernandes   | MF       | 1994-09-08 | MUN       |
+|  7 | Na Sang-ho        | MF       | 1996-08-12 | NULL      |
+|  8 | Eric García       | DF       | 2001-01-09 | NULL      |
+|  9 | Kai Havertz       | FW       | 1999-06-11 | NULL      |
++----+-------------------+----------+------------+-----------+
+
+mysql> select * from club;
++-----------+---------------------+---------+
+| club_code | club_name           | country |
++-----------+---------------------+---------+
+| ARS       | Arsenal             | England |
+| BAY       | Bayern Munich       | Germany |
+| LIV       | Liverpool           | England |
+| MAD       | Real Madrid         | Spain   |
+| MUN       | Manchester United   | England |
+| PSG       | Paris Saint-Germain | France  |
++-----------+---------------------+---------+
 
